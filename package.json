@@ -1,8 +1,12 @@
 {
-  "name": "tinymce-react-demo",
+  "name": "react-wysiwyg-implement",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^20.0.0",
+    "@ckeditor/ckeditor5-export-pdf": "0.0.4",
+    "@ckeditor/ckeditor5-react": "^2.1.0",
+    "@ckeditor/ckeditor5-table": "^20.0.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
