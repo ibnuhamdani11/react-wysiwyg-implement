@@ -7,8 +7,9 @@ class App extends React.Component {
  }
 
  render() {
+  const { visible } = this.props;
    return (
-    <Fragment>
+    <Fragment style={{'display': visible == false ? 'none' : '' }}>
       <Editor
         initialValue="<p>This is the initial content of the editor</p>"
         apiKey="fbfv61ea1truzo55ewqwsakzgigwpmdhkw03iqerg6brt5jr"

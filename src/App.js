@@ -14,7 +14,7 @@ import SideNav, { Toggle, Nav, NavItem, NavIcon, NavText } from '@trendmicro/rea
 import '@trendmicro/react-sidenav/dist/react-sidenav.css';
 import 'font-awesome/css/font-awesome.css';
 
-import RootComponent from './TinymceExample';
+// import RootComponent from './TinymceExample';
 import Home from './Home';
 import Report from './Report';
 

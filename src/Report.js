@@ -3,6 +3,7 @@ import jsPDF from 'jspdf';
 import header from './assets/images/header.PNG';
 import footer from './assets/images/footer.PNG';
 import './style.css';
+import TinymceExample from './TinymceExample';
 
 class Report extends Component {
 
@@ -46,15 +47,15 @@ class Report extends Component {
 	// var printArea = headerArea+contentArea+footerArea;
 	// console.log('printArea', printArea);
 
-	var mywindow = window.open('', 'new div');
-	mywindow.document.write('<html><head><title>my div</title>');
+	// var mywindow = window.open('', 'new div');
+	// mywindow.document.write('<html><head><title>my div</title>');
 	/*optional stylesheet*/ //mywindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
-	mywindow.document.write('</head><body >');
+	// mywindow.document.write('</head><body >');
 	// var headerArea = mywindow.document.createElement("IMG");
 	// headerArea.setAttribute("src", header);
 	// mywindow.document.body.appendChild(headerArea);
 	// mywindow.document.write(headerArea);
-	mywindow.document.body.appendChild(contentArea);
+	// mywindow.document.body.appendChild(contentArea);
 	// mywindow.document.write(contentArea);
 	// mywindow.document.body.appendChild(footerArea);
 	// mywindow.document.write(footerArea);
@@ -66,10 +67,10 @@ class Report extends Component {
 	// footerArea.setAttribute("src", footer);
 
 	// mywindow.document.write(printArea);
-	mywindow.document.write('</body></html>');
+	// mywindow.document.write('</body></html>');
 
-	mywindow.print();
-	mywindow.close();
+	// mywindow.print();
+	// mywindow.close();
 
 	// document.querySelector("iframe").contentWindow.print()
 
@@ -78,24 +79,53 @@ class Report extends Component {
 	// printArea.contentWindow.print();
 	// document.querySelector("#header_doc").contentWindow.print();
 
+		window.print();
+
+		// this.printDiv('printArea');
+
 	}
 
 	_renderHeader = () => {
 	// Import result is the URL of your image
-	return <img src={header} alt="Logo" className="hide" id="header_doc" />;
+	return <img src={header} alt="Logo" id="header_doc" />;
+	}
+
+	_renderContent = () => {
+		// let contentArea = document.getElementsByTagName("iframe")[0].innerHTML;
+		// if (!contentArea) {
+		// 	return;
+		// }
+		// console.log('contentArea', contentArea);
+		// // return contentArea;
+		// return <TinymceExample visible={false} />
 	}
 
 	_renderFooter = () => {
 	// Import result is the URL of your image
-	return <img src={footer} alt="Logo" className="hide" id="footer_doc" />;
+	return <img src={footer} alt="Logo" id="footer_doc" />;
+	}
+
+	printDiv = (divName) => {
+		// var mywindow = window.open('', 'report');
+		// var printContents = document.getElementById(divName).innerHTML;
+		// var originalContents = document.body.innerHTML;
+
+		// mywindow.document.body.innerHTML = printContents;
+
+		// mywindow.window.print();
+
+		// document.body.innerHTML = originalContents;
 	}
 
 	render() {
 		return (
 			<Fragment>
 				<h1>Report</h1>
+				<div id="section-to-print">
 				{ this._renderHeader() }
+				{ this._renderContent() }
 		        { this._renderFooter() }
+		        </div>
 				<button onClick={() => this.printToPdf() }>Print</button>
 			</Fragment>
 		);
