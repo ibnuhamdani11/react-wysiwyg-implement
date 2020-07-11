@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import jsPDF from 'jspdf';
-import header from './assets/images/header.PNG';
-import footer from './assets/images/footer.PNG';
+import header from './assets/images/header_pengadaan.PNG';
+import footer from './assets/images/footer_pengadaan.PNG';
 import './style.css';
 import TinymceExample from './TinymceExample';
 
@@ -91,6 +91,57 @@ class Report extends Component {
 	}
 
 	_renderContent = () => {
+		return (
+
+			<div>
+			<style>{"table {border-collapse: collapse; width: 100%} table, tr, td{border:1px solid black;}"}</style>
+				<p>Dengan Hormat</p>
+				<p> Sehubungan dengan ……………………………………., maka kami mengajukan permohonan pengadaan ………………………….. 
+						dengan spesifikasi sebagai berikut: 
+				</p>
+				<ul>
+					<li>………………………………………………………………………………</li>
+					<li>………………………………………………………………………………</li>
+				</ul>
+				<p> Pengadaan………………………… kami ajukan sebagai ………………………………………………. </p>
+				<p> Demikian permohonan ini disampaikan, atas perhatian dan kerjasamanya kami ucapkan terima kasih.</p>
+				<p>Hormat kami</p>
+				<p><b>Divisi SPR</b></p>
+				<br/>
+				{/*<br/>*/}
+				<br/>
+				<p><b> Errinto Pardede </b></p>
+				<p>Kepala Divisi</p>
+
+				<table>
+				  <thead>
+				    <tr>
+				      <th colSpan="3"><b>Rekomendasi Persetujuan dan Tanda tangan</b></th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <td rowSpan="2"><b><u>Arief Mulyadi</u></b><br/>Direktur Utama</td>
+				      <td>Setuju</td>
+				      <td style={{width: '30%', height: 50}}></td>
+				    </tr>
+				    <tr>
+				      <td>Tidak Setuju</td>
+				      <td style={{width: '30%', height: 50}}></td>
+				    </tr>
+				    <tr>
+				      <td rowSpan="2"><b><u>Tjatur H. Priyono</u></b><br/>Direktur Keuangan</td>
+				      <td>Setuju</td>
+				      <td style={{width: '30%', height: 50}}></td>
+				    </tr>
+				    <tr>
+				      <td>Tidak Setuju</td>
+				      <td style={{width: '30%', height: 50}}></td>
+				    </tr>				    
+				  </tbody>
+				</table>
+			</div>
+			)
 		// let contentArea = document.getElementsByTagName("iframe")[0].innerHTML;
 		// if (!contentArea) {
 		// 	return;

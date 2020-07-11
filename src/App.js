@@ -37,7 +37,7 @@ class App extends Component {
 			                <SideNav.Nav defaultSelected="home">
 			                    <NavItem eventKey="home">
 			                        <NavIcon>
-			                            <i className="fa fa-fw fa-home" style={{ fontSize: '1.75em' }} />
+			                            <i className="fa fa-fw fa-keyboard-o" style={{ fontSize: '1.75em' }} />
 			                        </NavIcon>
 			                        <NavText>
 			                            Home
@@ -45,7 +45,7 @@ class App extends Component {
 			                    </NavItem>
 			                    <NavItem eventKey="report">
 			                        <NavIcon>
-			                            <i className="fa fa-fw fa-line-chart" style={{ fontSize: '1.75em' }} />
+			                            <i className="fa fa-fw fa-file" style={{ fontSize: '1.75em' }} />
 			                        </NavIcon>
 			                        <NavText>
 			                            Report
